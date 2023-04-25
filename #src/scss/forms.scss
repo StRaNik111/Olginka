@@ -1,0 +1,90 @@
+
+//<BUTTONS (a.btn+tab)>====================================================================================================
+.btn {
+	display: inline-flex;
+	padding: 0px 0px;
+	align-items: center;
+	border-radius: 4px;
+	line-height: 22px;
+	text-transform: uppercase;
+	height: 58px;
+	color: #FFFFFF;
+	padding-right: 20px;
+	padding-left: 45px;
+	position: relative;
+	overflow: hidden;
+	font-size: 16px;
+	background: $greenColor;
+	white-space: nowrap;
+	// background-color: rgba(159, 203, 0, 0.85);
+	@media (max-width: 880px){
+		padding-right: 10px;
+		padding-left: 32px;
+	}
+	z-index: 1;
+	&::before{
+		content:'';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0%;
+		height: 100%;
+		background: linear-gradient(180deg, rgba(168, 214, 2, 0.85));
+
+		transition: all .3s;
+		z-index: -1;
+		border-radius: 4px;
+
+	}
+	@media (min-width: 992px) {
+		&:hover {
+			&::before{
+				width: 100%;
+				
+			}
+		}
+	}
+	&._fw {
+		width: 100%;
+	}
+}
+//</BUTTONS>====================================================================================================
+
+//<SELECT (sel+tab)>====================================================================================================
+
+//</SELECT>====================================================================================================
+
+//<INPUT (inp+tab)>====================================================================================================
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	&:focus {
+		outline: none;
+	}
+}
+.input {
+	// border-radius: 0 !important;
+	width: 100%;
+	display: block;
+	padding: 0px 20px;
+	background: #FFFFFF;
+	border: 1px solid rgba(64, 43, 38, 0.2);
+	border-radius: 4px;
+	height: 57px;
+	&:focus{
+		border: 1px solid #678400;
+	}
+	&._focus {
+	}
+	&._error {
+	}
+}
+textarea.input {
+	resize: none;
+	padding: 0px 0px;
+}
+//</INPUT>====================================================================================================
